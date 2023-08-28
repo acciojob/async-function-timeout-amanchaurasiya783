@@ -1,12 +1,10 @@
 //your JS code here. If required.
 const submitBtn = document.getElementById('btn');
 const output = document.getElementById('output');
-
-submitBtn.addEventListener('submit', async function(e){
-	e.preventDefault();
-	const text = document.getElementById('text');
-	const delay = document.getElementById('delay');
-	const result = await displayMsg;
+const text = document.getElementById('text');
+const delay = document.getElementById('delay');
+submitBtn.addEventListener('click', async function(e){
+	const result = await displayMsg(text.value, delay.value);
 	output.innerHTML = result;
 })
 
